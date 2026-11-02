@@ -16,19 +16,20 @@ export const AboutIntroduction: React.FC = () => {
       id="about-intro" 
       className="relative w-full overflow-hidden border-t border-[#0D0D0D]/10 bg-[#0D0D0D] text-white py-14 sm:py-24 md:py-28 px-4 sm:px-6 md:px-12 flex items-end sm:items-center min-h-[680px] sm:min-h-[680px]"
     >
-      {/* FULL-BLEED CENTRALIZED PHOTO
-          object-top on mobile anchors the face to the top half of the screen
-          object-center on desktop gives the balanced horizontal cinematic view */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center">
+      {/* PHOTO BACKGROUND:
+          On mobile: full-bleed background, anchored at the face (32% vertical)
+          On desktop: positioned on the right half (sm:w-1/2 lg:w-3/5 right-0) so the face and upper body remain fully visible beside the text */}
+      <div className="absolute inset-0 sm:left-auto sm:right-0 sm:w-1/2 lg:w-3/5 z-0 overflow-hidden pointer-events-none flex items-center justify-center sm:justify-end">
         <img
           src={portfolioData.profileImage || "/profile.jpg"}
           alt={`${portfolioData.brandName} - ${portfolioData.profession}`}
           loading="eager"
-          className="w-full h-full object-cover object-top sm:object-center brightness-95 sm:brightness-100 contrast-[1.04]"
+          style={{ objectPosition: 'center 32%' }}
+          className="w-full h-full object-cover brightness-95 sm:brightness-100 contrast-[1.04]"
         />
         {/* Soft edge-only shading on desktop, bottom-fade on mobile so the face stays completely clear */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/90 via-55% to-transparent sm:from-black/85 sm:via-transparent sm:to-black/60 pointer-events-none" />
-        <div className="hidden sm:block absolute inset-y-0 left-0 w-full sm:w-1/2 bg-gradient-to-r from-black/80 via-black/40 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/85 via-50% to-transparent sm:from-[#0D0D0D] sm:via-transparent sm:to-[#0D0D0D]/40 pointer-events-none" />
+        <div className="hidden sm:block absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-[#0D0D0D] to-transparent pointer-events-none" />
       </div>
 
       {/* Precision Corner Crosshairs */}
