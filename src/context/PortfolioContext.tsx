@@ -45,6 +45,14 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       if (saved) {
         const parsed = JSON.parse(saved);
         if (parsed && typeof parsed === 'object' && parsed.brandName) {
+          if (parsed.testimonials && parsed.testimonials.some((t: any) => t.author === 'David Chen' || t.clientName === 'David Chen' || t.author === 'Elena Rostova' || t.clientName === 'Elena Rostova')) {
+            parsed.testimonials = defaultData.testimonials;
+            try {
+              localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...defaultData, ...parsed }));
+            } catch {
+              // ignore
+            }
+          }
           return { ...defaultData, ...parsed };
         }
       }
