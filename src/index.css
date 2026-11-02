@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #ECEBE8;
+    color: #0D0D0D;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* Custom subtle scrollbar matching the concrete paper theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #ECEBE8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D0CECB;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E63E26;
+  }
+
+  ::selection {
+    background-color: #E63E26 !important;
+    color: #FFFFFF !important;
+  }
+
+  /* Ensure inputs and textareas always have full text selection & vivid high-contrast highlight */
+  input, textarea, select {
+    user-select: text !important;
+    -webkit-user-select: text !important;
+  }
+
+  input::selection,
+  textarea::selection,
+  input *::selection,
+  textarea *::selection {
+    background-color: #E63E26 !important;
+    color: #FFFFFF !important;
+  }
+}
+
+/* Subtle crosshair grid background */
+.bg-crosshair-grid {
+  background-size: 80px 80px;
+  background-image: 
+    radial-gradient(circle, rgba(13, 13, 13, 0.12) 1px, transparent 1px);
+}
+
+/* Kinetic outline stroke utility */
+.text-stroke-black {
+  -webkit-text-stroke: 1.5px #0D0D0D;
+  color: transparent;
+}
+
+.text-stroke-red {
+  -webkit-text-stroke: 1.5px #E63E26;
+  color: transparent;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1.5px #FFFFFF;
+  color: transparent;
+}
+
+/* Glass panel light aesthetic */
+.glass-panel-light {
+  background: rgba(236, 235, 232, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* 60fps GPU-Accelerated Marquee Animations (Compositor Thread) */
+@keyframes marquee-ltr {
+  0% {
+    transform: translate3d(-33.333%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes marquee-rtl {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.333%, 0, 0);
+  }
+}
+
+.animate-marquee-ltr {
+  animation: marquee-ltr 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-rtl {
+  animation: marquee-rtl 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-reviews {
+  animation: marquee-ltr 32s linear infinite;
+  will-change: transform;
+}
+
+/* 60fps GPU-Accelerated Flowing Liquid Ambient Mesh Animations */
+@keyframes mesh-blob-1 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate3d(70px, -50px, 0) scale(1.15) rotate(20deg);
+  }
+  66% {
+    transform: translate3d(-40px, 60px, 0) scale(0.92) rotate(-12deg);
+  }
+}
+
+@keyframes mesh-blob-2 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate3d(-60px, 50px, 0) scale(1.12) rotate(-18deg);
+  }
+  66% {
+    transform: translate3d(50px, -70px, 0) scale(0.94) rotate(14deg);
+  }
+}
+
+@keyframes mesh-blob-3 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-50px, -45px, 0) scale(1.2);
+  }
+}
+
+@keyframes mesh-blob-4 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(45px, 50px, 0) scale(1.1);
+  }
+}
+
+.animate-mesh-1 {
+  animation: mesh-blob-1 24s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-mesh-2 {
+  animation: mesh-blob-2 30s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-mesh-3 {
+  animation: mesh-blob-3 36s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-mesh-4 {
+  animation: mesh-blob-4 42s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Accessibility: prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

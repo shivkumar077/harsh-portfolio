@@ -1,0 +1,19 @@
+EDITFOLIO DIGITAL PRODUCT END-USER LICENSE AGREEMENT (EULA)
+
+Copyright (c) 2026. All rights reserved.
+
+This license grants the purchaser ("Licensee") a non-exclusive, non-transferable right to use, customize, and publish this portfolio website template subject to the following terms:
+
+1. PERMITTED USES:
+   - You may customize this template with your own name, bio, projects, videos, images, branding, and contact details.
+   - You may host and publish the resulting website as your personal or commercial professional portfolio.
+   - You may use this template for your own freelance video editing, color grading, directing, motion design, or creative services business.
+   - You may modify the code, components, styles, and configurations to suit your personal branding.
+
+2. RESTRICTIONS:
+   - You may NOT resell, sub-license, redistribute, share, lease, or package this template (or any modified version of it) as a website template, digital product, boilerplate, or design asset.
+   - You may NOT publish the source code in a public code repository for the purpose of distribution to others.
+   - You may NOT transfer your license to another person or business entity.
+
+3. DISCLAIMER OF WARRANTIES:
+   THE TEMPLATE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
