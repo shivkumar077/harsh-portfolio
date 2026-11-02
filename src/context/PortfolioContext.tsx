@@ -361,10 +361,8 @@ export const portfolioData: SiteConfig = ${jsonStr};
 
   // Keep document title synced
   useEffect(() => {
-    if (data.brandName && data.profession) {
-      document.title = `${data.brandName} — ${data.profession}`;
-    }
-  }, [data.brandName, data.profession]);
+    document.title = 'Harsh Mishra Edits';
+  }, []);
 
   return (
     <PortfolioContext.Provider
